@@ -108,16 +108,16 @@
     width: 350px;
 }
 
-.hide {
+/* .hide {
     opacity: 1;
     animation-name: a1;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 
-/*
+
 from and to
-*/ 
+
 
 @keyframes a1{
     to {
@@ -126,4 +126,4 @@ from and to
         padding: 0;
         border: 0;
     }
-}
+} */

@@ -14,14 +14,63 @@
 
     <h1 class="title__stock">Найди свой маршрут</h1>
     <div class="search">
-        <label for="region">Регион</label>
-        <input type="radio" id="region">
-        <label for="date">Дата</label>
-        <input type="radio" id="date">
-        <label for="search">Поиск</label>
-        <input type="radio" id="search">
-    </div>
+        <form>
+            <p>
+                Выберите подзодящий тур
+            </p>
+            <div>
+                <input type="radio" id="region" name="search" value="region">
+                <label for="region">1</label>
 
+                <input type="radio" id="date" name="search" value="date">
+                <label for="date">2</label>
+
+                <input type="radio" id="colov" name="search" value="colov">
+                <label for="colov">3</label>
+
+                <input type="radio" id="level" name="search" value="level">
+                <label for="level">4</label>
+            </div>
+            <div>
+                <button type="submit">Submit</button>
+            </div>
+
+
+        </form>
+        <pre id="log">
+        </pre>
+
+    </div>
+    <script>
+        var form = document.querySelector("form");
+        var log = document.querySelector("#log");
+
+        form.addEventListener("submit", function (event) {
+            var data = new FormData(form);
+            var output = "";
+            for (const entry of data) {
+                // name imput / value
+                output = entry[0] + "=" + entry[1] + "\r";
+            };
+            log.innerText = output;
+            event.preventDefault();
+        }, false);
+    </script>
+    <!-- 
+    для переноса данных
+// Сохранить значение в sessionStorage
+sessionStorage.setItem('key', 'value');
+
+// Получить значение из sessionStorage
+var data = sessionStorage.getItem('key');
+
+// Удалить значение из sessionStorage
+sessionStorage.removeItem('key');
+
+// Очистить
+sessionStorage.clear();
+
+ -->
     <!-- 
       <h3>Name trevel</h3>
                 <p>Date</p>

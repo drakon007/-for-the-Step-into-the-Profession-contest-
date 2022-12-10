@@ -12,50 +12,9 @@
 <body>
     <header></header>
 
-    <h1 class="title__stock">Найди свой маршрут</h1>
-    <div class="search">
-        <form>
-            <p>
-                Выберите подзодящий тур
-            </p>
-            <div>
-                <input type="radio" id="region" name="search" value="region">
-                <label for="region">1</label>
+    <h1 class="title__stock">Подходящие вам туры</h1>
 
-                <input type="radio" id="date" name="search" value="date">
-                <label for="date">2</label>
-
-                <input type="radio" id="colov" name="search" value="colov">
-                <label for="colov">3</label>
-
-                <input type="radio" id="level" name="search" value="level">
-                <label for="level">4</label>
-            </div>
-            <div>
-                <button type="submit">Submit</button>
-            </div>
-
-
-        </form>
-        <pre id="log">
-        </pre>
-
-    </div>
-    <script>
-        var form = document.querySelector("form");
-        var log = document.querySelector("#log");
-
-        form.addEventListener("submit", function (event) {
-            var data = new FormData(form);
-            var output = "";
-            for (const entry of data) {
-                // name imput / value
-                output = entry[0] + "=" + entry[1] + "\r";
-            };
-            log.innerText = output;
-            event.preventDefault();
-        }, false);
-    </script>
+   
     <!-- 
     для переноса данных
 // Сохранить значение в sessionStorage
@@ -87,7 +46,7 @@ sessionStorage.clear();
             <div class="img__travel">
             </div>
             <div class="text__trevel">
-                <!-- <h3 id="region">region</h3>
+                <h3 id="region">region</h3>
                 <p id="name">Name trevel</p>
                 <p id="difficult">Difficult trevel</p>
                 <p id="date">Date</p>
@@ -96,7 +55,7 @@ sessionStorage.clear();
                 </div>
                 <div id="dop_arr">
                     <p class="dop">dop</p>
-                </div> -->
+                </div>
             </div>
         </div>
 

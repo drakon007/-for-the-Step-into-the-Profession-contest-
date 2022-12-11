@@ -83,31 +83,44 @@
         <div id="log">
         </div> -->
 
-        <form action="">
+        <form id="form" action="search.html">
             <div>
-                <input type="radio" id="region" name="region" value="Mos">
-                <label for="region">Москва</label>
+                <!--Регион-->
+                <input type="radio" id="Mos" name="region" value="Mos">
+                <label for="Mos">Москва</label>
 
-                <input type="radio" id="date" name="region" value="Irk">
-                <label for="date">Иркутск</label>
+                <input type="radio" id="Irk" name="region" value="Irk">
+                <label for="Irk">Иркутск</label>
 
-                <input type="radio" id="colov" name="region" value="San">
-                <label for="colov">Санкт-Петербург</label>
+                <!--Дата-->
+                <input type="radio" id="today" name="date" value="today">
+                <label for="today">сегодня</label>
+
+                <input type="radio" id="tomorrow" name="date" value="tomorrow">
+                <label for="tomorrow">завтра</label>
+
+                <!--Колличество-->
+                <input type="radio" id="colov1" name="colov" value="1">
+                <label for="colov1">1</label>
+
+                <input type="radio" id="colov2" name="colov" value="2">
+                <label for="colov2">2</label>
+
+                <!--Уровень подготовки-->
+                <input type="radio" id="noob" name="level" value="noob">
+                <label for="noob">любитель</label>
+
+                <input type="radio" id="pro" name="level" value="pro">
+                <label for="pro">профессионал</label>
+
+
+
+                <button type="submit">получить</button>
+            </div>
+            <div id="log">
+
             </div>
         </form>
-        <form action="">
-
-        </form>
-        <form action="">
-
-        </form>
-        <form action="">
-
-        </form>
-
-        <div>
-            <button type="submit">Поиск</button>
-        </div>
     </div>
 
     <footer>
@@ -116,7 +129,7 @@
     <script src="./scripts/home.js" defer> </script>
     <script src="./scripts/header.js" defer> </script>
     <script src="./scripts/footer.js" defer> </script>
-    <script src="./scripts/search.js" defer> </script>
+    <script src="./scripts/searchPost.js" defer> </script>
     <!-- <script src="./scripts/actions.js" defer> </script>
     <script src="./scripts/comments.js" defer> </script> -->
 

@@ -1,67 +1,38 @@
-// поиск по тексту в нутри блока (учитывается регистр)
+let travel = document.querySelector('.travel__content')
 
-/*
-let list = ['JavaScript','Kotlin','Rust','PHP','Ruby','Java','MarkDown','Python','C++','Fortran','Assembler']
-const result = document.getElementById('results')
-renderList(list,result)
+let travelImg = document.createElement('div')
+travelImg.classList.add('img__travel')
+//добавить вставку картинки 
 
-// поиск по тексту (фильтр)
-function filter(val,list){
-let result=[];
-  list.forEach(i=>{
-    if(i.indexOf(val)!=-1)
-      result.push(i)
-  })
-return result;
-}
+let travelText = document.createElement('div')
+travelImg.classList.add('text__trevel')
 
-// отрисовку можно сделать другим образом
-function renderList(_list=[],el=document.body){
-    el.innerHTML='';
-  _list.forEach(i=>{
-    let new_el = document.createElement('li')
-    new_el.innerHTML=i
-    el.appendChild(new_el)
-  })
-}
+let region = document.createElement('h3')
+region.id = "region"
+region.innerHTML = sessionStorage.getItem('region');
 
-// прослушиваем инпут и получаем с него данные
-document.getElementById('search').addEventListener('input',e=>{
-let new_arr = filter(e.target.value,list)
-renderList(new_arr,result)
-})
+let name_travel = document.createElement('p')
+name_travel.id = "name_travel"
+name_travel.innerHTML = "Name trevel"
 
-//получаем все подобные элементы
-const filterData = document.querySelectorAll('.box')
-// получаем эллемент новигации и ожидаем клика в него 
-document.querySelector('nav').addEventListener('click', event=> {
-    // Провека нажатия на элемент li иначе ничего не делать
-    if (event.target.tagName !== 'li') return false;
-    // ищет по data-filter
-    let filterClass = event.target.dateset['filter'];
-    filterData.forEach( elem=> {
-        if (elem.classList.contains(filterClass)) {
-            elem.classList.add('hide') //не забыть сделать
-        }
-    })
-})
-*/
+let difficult = document.createElement('p')
+difficult.id = "difficult"
+difficult.innerHTML = sessionStorage.getItem('level');
 
-let form = document.querySelector("form");
-        let log = document.querySelector("#log");
+let colov = document.createElement('p')
+colov.id = "colov"
+colov.innerHTML = sessionStorage.getItem('colov');
 
-        // слушаем нажатие
-        form.addEventListener("submit", function (event) {
-          // сохраняем старую страницу
-            let data = new FormData(form);
-            //чистим поле
-            let output = "";
-            for (const entry of data) {
-              // нулевой - имя данноого инпута
-              // первый - id элемента на который нажали
-                output = entry[0] + "=" + entry[1] + "\r";
-            };
-            log.innerText = output;
-            // убераем все другие нажатые кнопки 
-            event.preventDefault();
-        }, false);
+let date = document.createElement('p')
+date.id = "date"
+date.innerHTML = sessionStorage.getItem('date');
+
+travelText.appendChild(region)
+travelText.appendChild(name_travel)
+travelText.appendChild(difficult)
+travelText.appendChild(colov)
+travelText.appendChild(date)
+
+travel.appendChild(travelImg)
+travel.appendChild(travelText)
+

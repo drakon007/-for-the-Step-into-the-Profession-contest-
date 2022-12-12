@@ -1,47 +1,65 @@
 .content {
+    min-width: 450px;
     position: relative;
     width: 100%;
     height: 100%;
 }
 
+h1, h3, p {
+    font-family: 'Open Sans', sans-serif;
+}
+
 .img__content {
-    background: url(https://image.wallperz.com/big_thumbs/wallperz.com_big_thumbs_baq8znzoarbe3lok243iby0xwd0qmh.jpg);
+    background: url(https://damion.club/uploads/posts/2022-09/1663940992_1-damion-club-p-ochen-krasivii-les-priroda-instagram-1.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -8px;
+    margin-right: -8px;
 }
 
 .info__img {
+    margin: 16.5% 0 16.5% 0;
     min-width: 350px;
     width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 30%;
-    padding-bottom: 30%;
 }
 
-.info__img h1 {
+.mainText__info {
+    padding:  5px 0 10px 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 72px;
+    text-shadow: 8px 6px 0px rgba(0,0,0,0.7);
+    border: 2px solid white;
+    border-left: none;
+    border-right: none;
     color: white;
     text-align: center;
 }
 
-.info__img h3 {
+.addedText__info {
+    font-size: 36px;
     color: white;
     text-align: center;
 }
 
-.title__stock {
+.center {
+    margin: 20px auto 25px auto;
+    width: 450px;
     text-align: center;
+   padding: 15px;
 }
 
 .marginTop {
     margin-top: 100px;
 }
 
+
 .title__p {
+    width: 50%;
     margin-left: 50px;
     text-indent: 50px;
 }

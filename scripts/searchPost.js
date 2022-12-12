@@ -11,18 +11,17 @@ sessionStorage.clear();
 */
 
 let form = document.querySelector("#form");
-        let log = document.querySelector("#log");
 
         // слушаем нажатие
         form.addEventListener("submit", function (event) {
+
           // сохраняем старую страницу
             let data = new FormData(form);
-            //чистим поле
-            let output = "";
+
             for (const entry of data) {
+
               // нулевой - имя данноого инпута
               // первый - id элемента на который нажали
-              output += entry[0] + "=" + entry[1] + "\r";
 
                 if (entry[0] === "region") {
                   sessionStorage.setItem('region', entry[1]);
@@ -37,12 +36,7 @@ let form = document.querySelector("#form");
                   sessionStorage.setItem('level', entry[1]);
                 }
 
-
-               
-
             };
-            log.innerText = output;
-            // убераем все другие нажатые кнопки 
             event.preventDefault();
             // переход на другую страницу
             window.location = "./search.html";
